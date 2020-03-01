@@ -51,7 +51,7 @@ public class WordChecker {
 
 
     public void startNewWord(String word) {
-        //triesCounter.setTryNumber(0);
+        triesCounter.setTryNumber(0);
         setGuessedLetters(new HashSet<>());
         currentWord = word;
         fillKnownSigns();
