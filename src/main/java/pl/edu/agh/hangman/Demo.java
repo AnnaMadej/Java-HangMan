@@ -18,7 +18,17 @@ public class Demo {
         UserInputReceiver userInputReceiver = new UserInputReceiver();
         TriesCounter triesCounter = new TriesCounter();
         WordChecker wordChecker = new WordChecker(triesCounter);
-        hangman = new Hangman(wordsPicker, boardPrinter, userInputReceiver, triesCounter, wordChecker);
+
+        wordsLoader = new WordsLoader();
+        try {
+			wordsLoader.loadWords("src/main/resources/slowa.txt");
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        System.out.println("aaa");
  
     }
 }
