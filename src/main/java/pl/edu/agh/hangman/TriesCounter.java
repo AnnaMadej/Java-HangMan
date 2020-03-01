@@ -5,16 +5,22 @@ public class TriesCounter {
     private int maxNumberOfTries = 6;
     private int tryNumber = 0;
 
-    public void incTryNumber(){
+    public int getTryNumber() {
+        return tryNumber;
     }
 
- 
+    public void setTryNumber(int tryNumber) {
+        this.tryNumber = tryNumber;
+    }
+
+    public void incTryNumber(){
+        tryNumber = tryNumber+1;
+    }
+    public int getMaxNumberOfTries() {
+        return maxNumberOfTries;
+    }
 
     public boolean checkIfWinner() {
-       return false;
-    }
-
-   public int getMaxNumberOfTries() {
-        return maxNumberOfTries;
+        return getTryNumber() < maxNumberOfTries;
     }
 }
