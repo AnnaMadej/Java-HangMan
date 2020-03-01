@@ -7,6 +7,8 @@ public class UserInputReceiver {
     private Scanner sc = new Scanner(System.in);
 
     public char inputFirstLetter() {
-        return 'A';
+        System.out.print("guess>");
+        String input = sc.next();
+        return input.charAt(0);
     }
 }
