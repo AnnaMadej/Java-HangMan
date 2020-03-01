@@ -19,6 +19,8 @@ public class Hangman {
     private void playNewWord() throws IOException {
         String currentWord = wordsPicker.pickAWord();
         wordChecker.startNewWord(currentWord);
+        System.out.println(currentWord);
+
 
         do {
             boardPrinter.printHangMan(wordChecker.getCurrentWord(), wordChecker.getGuessedLetters(), triesCounter.getTryNumber() );
@@ -30,6 +32,7 @@ public class Hangman {
 
 
         boolean isWinner = triesCounter.checkIfWinner();
+        System.out.println(currentWord);
         boardPrinter.printResult(isWinner);
     }
 
