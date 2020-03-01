@@ -11,6 +11,7 @@ public class WordsPicker {
     }
 
     public String pickAWord() {
-	return "Słowo!";
+        Random rand = new Random();
+        return words.get(rand.nextInt(words.size()));
     }
 }
